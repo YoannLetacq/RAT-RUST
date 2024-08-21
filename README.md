@@ -47,6 +47,8 @@ if books_by_unknown.is_empty() {
         println!("{}", book);
     }
 }
+
+```
 #### Temps Limite : 10 Minutes
 #### Bonnes pratiques :
 
