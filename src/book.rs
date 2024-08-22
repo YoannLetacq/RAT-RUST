@@ -1,13 +1,11 @@
 use std::fmt;
 
-// Structure représentant un livre.
 pub struct Book {
     pub title: String,
     pub author: String,
     pub is_borrowed: bool,
 }
 
-// Implémentation des méthodes pour la structure Book.
 impl Book {
     pub fn new(title: &str, author: &str) -> Book {
         Book {
@@ -19,7 +17,6 @@ impl Book {
 
 }
 
-// Trait Borrowable pour emprunter et retourner un livre.
 pub trait Borrowable {
     fn borrow_book(&mut self) -> Result<(), String>;
     fn return_book(&mut self) -> Result<(), String>;
@@ -48,7 +45,6 @@ impl Borrowable for Book {
 
 
 
-// Implémentation du trait Display pour Book.
 impl fmt::Display for Book {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let status = if self.is_borrowed { "Emprunté" } else { "Disponible" };
