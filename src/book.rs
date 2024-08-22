@@ -9,7 +9,6 @@ pub struct Book {
 
 // Implémentation des méthodes pour la structure Book.
 impl Book {
-    // Crée un nouveau livre.
     pub fn new(title: &str, author: &str) -> Book {
         Book {
             title: title.to_string(),
